@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .hover-transform-custom:hover {
+      transform: perspective(20px) rotateX(2deg) translateY(-50px);
+    }
+  }
+  
