@@ -4,21 +4,644 @@
 
 
 
+
+
+#logo{
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+
+#name {
+  margin-top: 1.7rem;
+  line-height: 1.4rem;
+  margin-left: -1rem;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #ccc
+}
+
 #Header{
-    background: #000;
+    /* background: #0e0d0d; */
+    background: rgb(19, 18, 18);
+  
     display: flex;
     color: white;
     justify-content:space-between; 
     line-height: 5rem;
     font-size: 1.3rem;
     padding-right: 2.3rem;
-    
-    
+  
+
 }
 #navBar ul{
     display: flex;
     gap: 2rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 
+
+
+.link li:hover{
+  color: gold;
+  text-decoration-line:underline;
+  text-underline-offset: 10px;
+}
+.link li.active {
+  color: gold;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+
+
+/* Hamburger Icon */
+#hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  #logo {
+      flex-direction: column; /* Stack logo vertically */
+  }
+
+  #name {
+      font-size: 1.2rem;
+      margin-left: 0;
+  }
+
+  #Header {
+      flex-direction: column; /* Stack header content vertically */
+      line-height: 3rem;
+      padding-right: 1rem;
+  }
+
+  #navBar ul {
+      display: none; /* Hide the nav links by default */
+      flex-direction: column; /* Stack navbar items vertically */
+      gap: 1rem;
+      position: absolute;
+      top: 60px; /* Position below header */
+      right: 0;
+      background-color: rgb(19, 18, 18);
+      padding: 1rem;
+      width: 100%;
+  }
+
+  #navBar ul li {
+      font-size: 1.2rem;
+  }
+
+  #hamburger {
+      display: block; /* Show the hamburger icon */
+  }
+
+  /* Show menu when hamburger is clicked */
+  #navBar.open ul {
+      display: flex;
+  }
+}
+
+/* Optional for very small screens */
+@media (max-width: 480px) {
+  #Header {
+      line-height: 2rem;
+      font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+#HomePage{
+
+    height:86.5vh;
+    /* background: rgb(13, 13, 13); */
+    background: rgb(33, 33, 33);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main {
+    display: flex;
+   justify-content: center;
+   padding-top: 120px;
+   padding-left: 35px;
+   padding-right: 35px;
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+#container{
+
+width: 50%;
+height: 300px;
+
+
+color: aliceblue;
+
+padding: 10px; 
+margin: -10px; 
+
+
+
+}
+
+
+
+
+
+#content{
+    padding-left:  22px;
+    padding-right: 22px;
+    padding-top: 20px;
+   
+  
     
+    
+}
+
+.box {
+    position: relative; /* Add this to ensure that absolute positioning works correctly */
+    width: 100%; /* Or a fixed width if needed */
+  height: 300px; /* Fixed height for .box */
+
+  border: 2px solid rgb(240, 205, 8); 
+  border-radius: 20px;
+  background: #000;;
+  overflow: hidden; /* Prevents overflow outside the container */
+
+  }
+
+
+
+.box span{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgb(255, 224, 49);
+    transition: 0.3s;
+    transform: translate(-50%,-50%);
+    mix-blend-mode: difference;
+    top: 50%; /* Position from top */
+    left: 50%; /* Position from left */
+}
+
+
+.box:hover span{
+    width: 300px;
+    height: 300px;
+}
+
+
+.heading{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: rgb(255, 199, 56)
+}
+
+
+.paragraph {
+    color: gold;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-style: italic;
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pic{
+    
+    width: 50%;
+    height: 300px;
+   
+   
+   
+}
+
+#profile {
+    width: 24rem;
+    height: 24rem;
+    margin-left: 7rem;
+    margin-top: -3rem;
+    background-color: gold;
+    border-radius: 20rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For tablets and small laptops */
+@media (max-width: 992px) {
+  #HomePage {
+      height: auto;
+      padding: 10px;
+  }
+
+  #main {
+      padding-top: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  #container {
+      width: 70%;
+      margin: 0 auto;
+  }
+
+  .heading {
+      font-size: 2rem;
+  }
+
+  .paragraph {
+      font-size: 1rem;
+  }
+
+  #profile {
+      width: 20rem;
+      height: 20rem;
+      margin-left: 4rem;
+      margin-top: 0;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  #main {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+  }
+
+  #container {
+      width: 90%;
+  }
+
+  .heading {
+      font-size: 1.8rem;
+      text-align: center;
+  }
+
+  .paragraph {
+      font-size: 0.9rem;
+      text-align: center;
+  }
+
+  #profile {
+      width: 16rem;
+      height: 16rem;
+      margin-left: 0;
+  }
+
+  .box {
+      height: 250px;
+  }
+
+  .box span {
+      width: 200px;
+      height: 200px;
+  }
+
+  .box:hover span {
+      width: 250px;
+      height: 250px;
+  }
+}
+
+
+
+/* For small screens - Disable hover animation */
+@media (max-width: 600px) {
+  .box span {
+      /* Set width and height to 0 on smaller screens */
+      width: 0;
+      height: 0;
+  }
+
+  .box:hover span {
+      /* Override the hover effect */
+      width: 0;
+      height: 0;
+  }
+}
+/* For screens 562px wide and below */
+@media (max-width: 562px) {
+  #container {
+      width: 90%; /* Increase width to allow more room for text */
+      padding: 10px; /* Add padding for readability */
+  }
+
+  .heading {
+      font-size: 1.6rem; /* Adjust font size for better fit */
+      text-align: center; /* Center-align text */
+      word-wrap: break-word; /* Prevent overflow by wrapping long words */
+  }
+
+  .paragraph {
+      font-size: 0.9rem; /* Adjust font size for better readability */
+      text-align: center;
+      word-wrap: break-word; /* Prevent overflow by wrapping long words */
+  }
+}
+
+
+
+
+
+
+
+
+/* About Page */
+
+
+
+
+
+
+
+
+/* General reset and body styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(33, 33, 33); /* Dark background */
+    color: #fff; /* White text color for contrast */
+    line-height: 1.6;
+    
+    transition: background-color 1s ease; /* Smooth transition for background color */
+  }
+  
+  /* About page container */
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Section Styles */
+  .section {
+    margin-bottom: 40px;
+    background-color: rgb(248, 248, 161);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-out; /* Fade-in animation for sections */
+    border: 6px solid gold;
+    }
+
+
+  /* Section headings */
+  .section h2 {
+    font-size: 2rem;
+    color: goldenrod;
+    margin-bottom: 20px;
+  }
+  
+  .section p {
+    font-size: 1.2rem;
+    color: rgb(107, 91, 3);
+    line-height: 1.6;
+  }
+  
+  /* Skills List */
+  .skills-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;  }
+  
+  .skills-list li {
+    background-color: rgb(107, 91, 3) ;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .skills-list li:hover {
+    transform: scale(1.1); /* Hover effect on skills */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 20px;
+    }
+  
+    .section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .skills-list {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  /* Keyframe Animation for Fade-In Effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Contact Page */
+
+
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease;
+}
+
+
+.contact-container h1 {
+  font-size: 2rem;
+  color: goldenrod;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.success-message {
+  color: goldenrod;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+/* Contact form styles */
+.contact-form label {
+  display: block;
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: goldenrod;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(241, 219, 89);
+  color:  black;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: rgb(248, 221, 73);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
