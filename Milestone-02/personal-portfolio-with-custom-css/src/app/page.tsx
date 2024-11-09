@@ -10,8 +10,8 @@ export default function Home() {
         const targetBox = box as HTMLElement;
 
         const mouseEvent = e as MouseEvent; // Cast the event to MouseEvent
-        let x = mouseEvent.pageX - targetBox.offsetLeft;
-        let y = mouseEvent.pageY - targetBox.offsetTop;
+        const x = mouseEvent.pageX - targetBox.offsetLeft;
+        const y = mouseEvent.pageY - targetBox.offsetTop;
 
         document.querySelectorAll("span").forEach((span) => {
           span.style.left = x + 'px';
